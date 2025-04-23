@@ -15,6 +15,7 @@ export function About() {
 								src={about1Img}
 								alt="Foto do Cachorro"
 								fill
+								sizes="100vw"
 								quality={100}
 								priority
 								className="object-cover hover:scale-110 duration-300"
