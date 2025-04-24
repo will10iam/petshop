@@ -54,8 +54,13 @@ export function Testimonials() {
 
 	return (
 		<section className="bg-[#FFD449] py-16">
-			<div className="container px-4 mx-auto">
-				<h2 className="text-4xl font-bold text-center mb-12">Depoimentos</h2>
+			<div className="container px-4 mx-auto" data-aos="zoom-in">
+				<h2
+					className="text-4xl font-bold text-center mb-12"
+					data-aos="fade-down"
+				>
+					Depoimentos
+				</h2>
 
 				<div className="relative max-w-4xl mx-auto">
 					<div className="overflow-hidden" ref={emblaRef}>

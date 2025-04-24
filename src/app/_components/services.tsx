@@ -74,7 +74,7 @@ export function Services() {
 
 	return (
 		<section className="bg-white py-16">
-			<div className="container px-4 mx-auto">
+			<div className="container px-4 mx-auto" data-aos="zoom-out">
 				<h2 className="text-4xl font-bold mb-12">Serviços</h2>
 
 				<div className="relative">
@@ -107,7 +107,7 @@ export function Services() {
 											</div>
 
 											<a
-												href="#"
+												href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações sobre ${item.title}`}
 												className="flex items-center justify-center gap-2 hover:bg-red-500 px-4 py-1 rounded-md duration-300"
 											>
 												<WhatsappLogo className="w-5 h-5" />
