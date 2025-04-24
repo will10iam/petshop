@@ -11,6 +11,8 @@ import {
 	Clock,
 } from "lucide-react";
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const services = [
 	{
@@ -106,13 +108,26 @@ export function Services() {
 												<span>{item.duration}</span>
 											</div>
 
-											<a
+											{/* <a
 												href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações sobre ${item.title}`}
 												className="flex items-center justify-center gap-2 hover:bg-red-500 px-4 py-1 rounded-md duration-300"
 											>
 												<WhatsappLogo className="w-5 h-5" />
 												Entrar em contato
-											</a>
+											</a> */}
+
+											<Button
+												asChild
+												className="bg-transparent hover:bg-red-500"
+											>
+												<Link
+													href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações sobre ${item.title}`}
+													target="_blank"
+												>
+													<WhatsappLogo className="w-5 h-5" />
+													Entrar em contato
+												</Link>
+											</Button>
 										</div>
 									</article>
 								</div>

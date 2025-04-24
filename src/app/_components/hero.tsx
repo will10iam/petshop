@@ -2,6 +2,8 @@ import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import dogImg from "../../../public/hero-dog.webp";
 import catImg from "../../../public/cat-hero.png";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Hero() {
 	return (
@@ -32,16 +34,22 @@ export function Hero() {
 							felicidade do seu amigo de quatro patas.
 						</p>
 
-						<a
-							data-aos="fade-up"
-							data-aos-delay="500"
-							target="_blank"
-							href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações`}
-							className="bg-green-500 px-5 py-2 rounded-md font-semibold flex items-center justify-center w-fit gap-2"
-						>
-							<WhatsappLogo className="w-5 h-5" />
-							Contato via WhatsApp
-						</a>
+						<div>
+							<Button
+								asChild
+								className="bg-green-500 px-5 py-4 rounded-md font-semibold flex items-center justify-center w-fit gap-2 hover:bg-green-600"
+								data-aos="fade-up"
+								data-aos-delay="500"
+							>
+								<Link
+									href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações`}
+									target="_blank"
+								>
+									<WhatsappLogo className="w-5 h-5" />
+									Contato via WhatsApp
+								</Link>
+							</Button>
+						</div>
 
 						<div className="mt-8">
 							<p className="text-sm mb-4">

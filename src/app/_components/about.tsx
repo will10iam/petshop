@@ -3,6 +3,8 @@ import about1Img from "../../../public/about-1.png";
 import about2Img from "../../../public/about-2.png";
 import { Check, MapPin } from "lucide-react";
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function About() {
 	return (
@@ -71,21 +73,35 @@ export function About() {
 							</li>
 						</ul>
 						<div className="flex gap-2">
-							<a
-								href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações`}
-								className="bg-[#E84C3D] text-white flex items-center justify-center w-fit gap-2 px-4 py-2 rounded-md"
+							<Button
+								asChild
+								className="bg-green-500 px-5 py-4 rounded-md font-semibold flex items-center justify-center w-fit gap-2 hover:bg-green-600"
+								data-aos="fade-left"
+								data-aos-delay="500"
 							>
-								<WhatsappLogo className="w-5 h-5 text-white" />
-								Contato via Whatsapp
-							</a>
+								<Link
+									href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações`}
+									target="_blank"
+								>
+									<WhatsappLogo className="w-5 h-5" />
+									Contato via WhatsApp
+								</Link>
+							</Button>
 
-							<a
-								href="#"
-								className="flex items-center justify-center w-fit gap-2 px-4 py-2 rounded-md"
+							<Button
+								asChild
+								className="bg-red-500 px-5 py-4 rounded-md font-semibold flex items-center justify-center w-fit gap-2 hover:bg-red-600 hover:scale-110 duration-300"
+								data-aos="fade-left"
+								data-aos-delay="500"
 							>
-								<MapPin className="w-5 h-5 text-black" />
-								Endereço da Loja
-							</a>
+								<Link
+									href={`https://wa.me/5519996602839?text=Olá vim pelo site e gostaria de mais informações`}
+									target="_blank"
+								>
+									<MapPin className="w-5 h-5" />
+									Endereço da Loja
+								</Link>
+							</Button>
 						</div>
 					</div>
 				</div>
